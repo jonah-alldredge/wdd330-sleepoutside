@@ -1,7 +1,8 @@
 import ProductData, { createProductDetails } from "./ProductData.mjs";
-import { setLocalStorage } from "./utils.mjs";
+import ProductList from './ProductList.mjs';
 
 const data = new ProductData('tents');
+const list = new ProductList();
 const ul = document.querySelector('.product-list');
 
 async function renderProducts() {

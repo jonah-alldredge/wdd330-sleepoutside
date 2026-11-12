@@ -28,3 +28,7 @@ export function setClick(selector, callback) {
   });
   qs(selector).addEventListener("click", callback);
 }
+
+export function renderListsWithTemplate(templateFn, parentElement, list, position, clear) {
+  
+}
