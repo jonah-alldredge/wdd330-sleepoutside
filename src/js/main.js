@@ -1,5 +1,6 @@
 import ProductData, { createProductDetails } from "./ProductData.mjs";
 import ProductList from './ProductList.mjs';
+import { loadHeaderFooter } from "./utils.mjs";
 
 const data = new ProductData('tents');
 const list = new ProductList();
@@ -20,4 +21,5 @@ async function insertData() {
   return products;
 }
 
+loadHeaderFooter();
 renderProducts();
