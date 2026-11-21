@@ -29,10 +29,19 @@ export function setClick(selector, callback) {
   qs(selector).addEventListener("click", callback);
 }
 
+export function renderListsWithTemplate(template, parentElement, list, position = 'afterbegin', clear = false) {
+  const htmlStrings = list.map(template);
+  if (clear) {
+    parentElement.innerHTML = '';
+  }
+  parentElement.insertAdjacentHTML(position, htmlStrings.join(''));
+
+}
+
 export function renderWithTemplate(template, parentElement, data, callback) {
   parentElement.innerHTML = template;
   if (callback) {
-    callback(data)
+    callback(data);
   }
 }
 
