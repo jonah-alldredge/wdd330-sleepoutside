@@ -1,14 +1,14 @@
-import ProductData from "./ProductData.mjs";
+import ExternalServices from "./ExternalServices.mjs";
 import ProductList from "./ProductList.mjs";
-import { loadHeaderFooter, getParam} from "./utils.mjs";
+import { loadHeaderFooter, getParam } from "./utils.mjs";
 
-const category = getParam('category');
-const dataSource = new ProductData();
+const category = getParam('category') || 'tents';
+const dataSource = new ExternalServices();
 const ul = document.querySelector('.product-list');
 const listing = new ProductList(category, dataSource, ul);
 
-loadHeaderFooter();
 listing.init();
+loadHeaderFooter();
 
 // async function renderProducts() {
 //   const dataList = await insertData();

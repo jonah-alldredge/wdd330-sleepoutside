@@ -30,6 +30,8 @@ img {
   max-width: 100%;
 }
 
+
+
 header {
   display: flex;
   justify-content: space-between;
@@ -248,6 +250,26 @@ button {
   background-color: white;
   padding: 0;
   justify-self: start;
+}
+.hide {
+  display: none;
+}
+.cart-total {
+  text-align: center;
+  padding: 10px;
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+#checkoutSubmit {
+  margin-bottom: 1rem;
+}
+
+#checkout-form fieldset {
+  margin: 1rem;
+  padding: 1rem;
 }
 
 @media screen and (min-width: 500px) {
